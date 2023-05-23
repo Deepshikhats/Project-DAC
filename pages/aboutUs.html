@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#483248",
+              secondary: "#CCB4CC",
+              tertiary: "#806180",
+              primaryVariant1: "#593D59",
+              primaryVariant2: "#332333",
+              primaryVariant3: "rgba(41, 28, 41, 0.8)",
+              blackVariant1: "#363636",
+              blackVariant2: "#242424",
+              greyVariant1: "#E5E5E5",
+              greyVariant2: "#F3F3F3",
+              greyVariant3: "#DCDCDC",
+              greyVariant4: "#9595954d",
+              offWhite: "rgba(255, 255, 255, 0.5)",
+              roseVariant2: "rgba(242, 228, 242, 0.3)",
+              roseVariant1: "rgba(242, 228, 242, 0.5)",
+              roseVariant3: "#F2E4F2",
+            },
+            fontFamily: {
+              sans: ['"DM Sans"'],
+            },
+            spacing: {
+              "18px": "18px",
+              15: "60px",
+              18: "72px",
+              50: "200px",
+              30: "120px",
+            },
+            fontSize: {
+              32: "32px",
+              64: "64px",
+            },
+            borderRadius: {
+              5: "5px",
+            },
+          },
+        },
+      };
+    </script>
+    <title>DAC-About Us</title>
+  </head>
+  <body class="font-sans font-medium wrapper">
+    <!-- reusable component below- section_header-->
+    <section class="bg-primary px-5 md:px-10 lg:px-20 pt-5 lg:pt-10 pb-10">
+      <div class="mx-auto max-w-[1120px] flex flex-col">
+        <header class="flex justify-between items-baseline md:me-5 lg:mr-0">
+          <div class="flex items-end w-[45%] md:w-1/2">
+            <img src="../assets/icons/logo.svg" alt="logo" />
+            <img
+              class="ml-6"
+              src="../assets/icons/brand.svg"
+              alt="brand_name"
+            />
+          </div>
+          <div
+            class="flex flex-col md:flex-row items-end md:items-start gap-[60px] md:gap-10 md:gap-none"
+            id="iconsToHide"
+          >
+            <img
+              src="../assets/icons/hamburger.svg"
+              alt="hamburger_menu"
+              onclick="handleMenu()"
+              class="cursor-pointer h-10 lg:h-12"
+            />
+            <!-- below button hidden in mobile view except in home screens-->
+            <button
+              class="hidden md:flex items-center bg-white rounded justify-center h-10 lg:h-12 w-[149px] lg:w-[161px]"
+            >
+              <img src="../assets/icons/circle_chat.svg" alt="chat_icon" />
+              <span class="font-sans ml-3.5 text-base font-bold"
+                >Ask Lawyer</span
+              >
+            </button>
+            <!-- above button hidden in mobile view except in home screen-->
+          </div>
+        </header>
+        <div class="flex justify-between items-end lg:mt-[66px] mt-10">
+          <div class="flex flex-col gap-2.5 w-100 lg:w-1/2">
+            <div
+              class="flex gap-5 items-center text-base lg:text-xl text-white"
+            >
+              <span class="leading-5">HOME</span>
+              <img
+                alt="arrow"
+                src="../assets/images/arrow.png"
+                class="w-1 h-2"
+              />
+              <span class="leading-5 text-offWhite">ABOUT US</span>
+            </div>
+            <h1 class="text-white text-5xl lg:text-64 leading-[65px]">
+              About Us
+            </h1>
+            <hr class="border-b-2 border-secondary w-24" />
+          </div>
+          <div class="lg:w-1/2 hidden lg:block">
+            <img
+              alt="logo"
+              src="../assets/images/dac.png"
+              class="float-right animate-pulse h-[180px]"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- hamburger_menu below -->
+      <div
+        class="absolute top-0 right-0 h-full w-full bg-primaryVariant3 hidden"
+        id="slider_wrapper"
+      >
+        <div
+          id="hamburger_menu"
+          class="bg-primary border-s-2 border-white absolute top-0 right-0 h-full p-10 lg:p-20"
+        >
+          <div class="hidden flex-col items-center h-full" id="slider_wrapper">
+            <img
+              alt="slider"
+              src="../assets/images/hamburger.png"
+              class="absolute top-20 left-[-50px] cursor-pointer"
+              onclick="handleMenu()"
+            />
+
+            <img
+              src="../assets/icons/logo2.svg"
+              class="max-w-[200px] max-h-[200px]"
+            />
+            <ul
+              class="text-2xl text-secondary font-normal list space-y-5 md:mt-10 leading-8 lg:mt-15 text-center"
+            >
+              <li><a href="aboutUs.html">About Us</a></li>
+              <li><a href="practiceAreas.html">Practice areas</a></li>
+              <li><a>Career</a></li>
+              <li><a>Blogs</a></li>
+              <li><a>Contact us</a></li>
+            </ul>
+            <div class="flex gap-6 mt-auto">
+              <a>
+                <img src="../assets/icons/linkedin.svg" alt="linkedin" />
+              </a>
+              <a>
+                <img src="../assets/icons/twitter.svg" alt="twitter" />
+              </a>
+              <a>
+                <img src="../assets/icons/fb.svg" alt="fb" />
+              </a>
+              <a>
+                <img src="../assets/icons/instagram.svg" alt="instagram" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- hamburger_menu above -->
+    </section>
+    <!-- reusable component above- header-->
+    <!-- reusable section below -->
+    <section
+      id="about_details"
+      class="bg-white py-20 px-5 md:px-10 lg:px-20 overflow-hidden"
+    >
+      <div
+        class="max-w-[1120px] mx-auto flex flex-col md:flex-row justify-between md:items-start items-center gap-20"
+      >
+        <div class="w-full md:w-1/2">
+          <img
+            src="../assets/images/justice_lady.png"
+            alt="justice_lady"
+            class="w-80 lg:w-[520px] h-80 lg:h-[480px] mx-auto"
+          />
+        </div>
+        <div class="w-full md:w-1/2">
+          <h2 class="text-blackVariant1 mb-10">Lorem ipsum dolor</h2>
+          <p class="text-blackVariant2 text-base">
+            Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+            tellus elit sed risus. Maecenas eget condimentum velit, sit amet
+            feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
+            conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus
+            enim egestas, ac scelerisque ante pulvinar.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- reusable section above -->
+    <section
+      id="history_details"
+      class="bg-greyVariant2 py-20 md:pb-8 lg:pb-20 px-5 md:px-10 lg:px-20"
+    >
+      <div
+        class="max-w-[1120px] mx-auto border-2 border-greyVariant1 rounded-5 p-5 pt-10 md:p-10 md:pt-15 bg-white flex flex-col items-center"
+      >
+        <h3 class="text-primary text-[32px] font-normal">Our History</h3>
+        <ul
+          class="flex justify-center gap-[30px] text-blackVariant2 text-base mt-5 mb-[70px] w-full overflow-x-auto"
+        >
+          <li>1980’s</li>
+          <li>1990’s</li>
+          <li>2000’s</li>
+          <li>2010’s</li>
+          <li>2020 onwards</li>
+        </ul>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-auto gap-10"
+        >
+          <div
+            id="history_card"
+            class="p-[30px] rounded-5 bg-roseVariant2 max-w-auto lg:max-w-[320px] h-50 md:h-[175px] lg:h-50 text-blackVariant2 overflow-y-auto"
+          >
+            <h5 class="text-2xl">1980</h5>
+            <p class="text-base mt-4">
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+              turpis molestie, dictum est a, mattis tellus.
+            </p>
+          </div>
+          <div class="max-w-auto lg:max-w-[320px] h-50 md:h-[175px] lg:h-50">
+            <img src="../assets/images/history1.png" class="w-full h-full" />
+          </div>
+          <div
+            id="history_card"
+            class="p-[30px] rounded-5 bg-roseVariant2 max-w-auto lg:max-w-[320px] h-50 md:h-[175px] lg:h-50 text-blackVariant2 overflow-y-auto"
+          >
+            <h5 class="text-2xl">1980</h5>
+            <p class="text-base mt-4">
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+              turpis molestie, dictum est a, mattis tellus.
+            </p>
+          </div>
+          <div class="max-w-auto lg:max-w-[320px] h-50 md:h-[175px] lg:h-50">
+            <img src="../assets/images/history2.png" class="w-full h-full" />
+          </div>
+          <div
+            id="history_card"
+            class="p-[30px] rounded-5 bg-roseVariant2 max-w-auto lg:max-w-[320px] h-50 md:h-[175px] lg:h-50 text-blackVariant2 overflow-y-auto"
+          >
+            <h5 class="text-2xl">1980</h5>
+            <p class="text-base mt-4">
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+              turpis molestie, dictum est a, mattis tellus.
+            </p>
+          </div>
+          <div class="max-w-auto lg:max-w-[320px] h-50 md:h-[175px] lg:h-50">
+            <img src="../assets/images/history3.png" class="w-full h-full" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="membership_section"
+      class="bg-white py-20 px-15 md:px-[150px] lg:px-20"
+    >
+      <div
+        class="mx-auto max-w-[1120px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-auto gap-10"
+      >
+        <div class="flex flex-col items-center">
+          <img src="../assets/images/Group.png" alt="logos" class="w-30 h-30" />
+          <div class="mt-5 text-center text-base text-blackVariant2">
+            Distinguish member of International Council of Jurists
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="../assets/images/Group (1).png" class="w-30 h-30" />
+          <div class="mt-5 text-center text-base text-blackVariant2">
+            Registered with Bar Council Of Delhi.
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="../assets/images/Group (2).png" class="w-30 h-30" />
+          <div class="mt-5 text-center text-base text-blackVariant2">
+            Registered member of Delhi High Court Bar.
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="../assets/images/Group (3).png" class="w-30 h-30" />
+          <div class="mt-5 text-center text-base text-blackVariant2">
+            Govt. Certified Mediator.
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="vision_section"
+      class="bg-roseVariant1 py-20 px-5 md:px-[70px]"
+    >
+      <div class="max-w-[1120px] mx-auto flex flex-col items-center space-y-10">
+        <h2
+          class="leading-[54px] text-blackVar#363636iant1 font-normal text-center"
+        >
+          Norem ipsum dolor sit amet, consectetur adipiscing elit vulputate
+          libero
+        </h2>
+        <div class="flex md:flex-row flex-col gap-10">
+          <div
+            class="flex flex-col gap-5 rounded-5 border-2 border-secondary bg-white lg:max-w-[400px] lg:max-h-[400px] p-[30px]"
+          >
+            <img src="../assets/images/binocular.png" class="h-10 w-12" />
+            <h5 class="text-2xl">Our Vision</h5>
+            <div class="text-blackVariant2 text-base leading-[21px]">
+              <p>
+                Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus.
+              </p>
+              <p class="mt-10">
+                Sed dignissim, metus nec fringilla accumsan, risus sem
+                sollicitudin lacus, ut interdum tellus elit sed risus.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col gap-5 rounded-5 border-2 border-secondary bg-white lg:max-w-[400px] lg:max-h-[400px] p-[30px]"
+          >
+            <img src="../assets/images/binocular.png" class="h-10 w-12" />
+            <h5 class="text-2xl">Our Vision</h5>
+            <div class="text-blackVariant2 text-base leading-[21px]">
+              <p>
+                Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus.
+              </p>
+              <p class="mt-10">
+                Sed dignissim, metus nec fringilla accumsan, risus sem
+                sollicitudin lacus, ut interdum tellus elit sed risus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-20 px-5 md:px-10 lg:px-20">
+      <div
+        class="mx-auto max-w-[1120px] flex flex-col items-center gap-10 text-center"
+      >
+        <h2>Senior Legal Advisors</h2>
+        <p class="text-base text-blackVariant2 leading-5">
+          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan,
+        </p>
+        <div
+          class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-auto"
+        >
+          <div class="flex flex-col items-center">
+            <div
+              class="bg-greyVariant3 max-max-w-60 h-60 rounded-5 hover:bg-primary text-roseVariant3 memberCards"
+            >
+              <div
+                class="invisible flex flex-col items-center p-5 h-full w-full overflow-y-auto gap-5 card justify-end"
+              >
+                <p class="text-center text-base leading-5 break-all">
+                  Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et.
+                </p>
+                <div class="flex gap-[30px]">
+                  <img src="../assets/icons/linkedin.svg" alt="linkedin" />
+                  <img src="../assets/icons/twitter.svg" alt="twitter" />
+                </div>
+              </div>
+            </div>
+            <h4 class="text-blackVariant2 text-xl mt-5 mb-2.5">
+              Vikanth Kamalakanthan
+            </h4>
+            <span class="text-blackVariant2 font-normal text-base"
+              >Managing Partner</span
+            >
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="bg-greyVariant3 max-w-60 h-60 rounded-5 hover:bg-primary text-roseVariant3 memberCards"
+            >
+              <div
+                class="invisible flex flex-col items-center p-5 h-full w-full overflow-y-auto gap-5 card justify-end"
+              >
+                <p class="text-center text-base leading-5 break-all">
+                  Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et.
+                </p>
+                <div class="flex gap-[30px]">
+                  <img src="../assets/icons/linkedin.svg" alt="linkedin" />
+                  <img src="../assets/icons/twitter.svg" alt="twitter" />
+                </div>
+              </div>
+            </div>
+            <h4 class="text-blackVariant2 text-xl mt-5 mb-2.5">
+              Vikanth Kamalakanthan
+            </h4>
+            <span class="text-blackVariant2 font-normal text-base"
+              >Managing Partner</span
+            >
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="bg-greyVariant3 max-w-60 h-60 rounded-5 hover:bg-primary text-roseVariant3 memberCards"
+            >
+              <div
+                class="invisible flex flex-col items-center p-5 h-full w-full overflow-y-auto gap-5 card justify-end"
+              >
+                <p class="text-center text-base leading-5 break-all">
+                  Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et.
+                </p>
+                <div class="flex gap-[30px]">
+                  <img src="../assets/icons/linkedin.svg" alt="linkedin" />
+                  <img src="../assets/icons/twitter.svg" alt="twitter" />
+                </div>
+              </div>
+            </div>
+            <h4 class="text-blackVariant2 text-xl mt-5 mb-2.5">
+              Vikanth Kamalakanthan
+            </h4>
+            <span class="text-blackVariant2 font-normal text-base"
+              >Managing Partner</span
+            >
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="bg-greyVariant3 max-w-60 h-60 rounded-5 hover:bg-primary text-roseVariant3 memberCards"
+            >
+              <div
+                class="invisible flex flex-col items-center p-5 h-full w-full overflow-y-auto gap-5 card justify-end"
+              >
+                <p class="text-center text-base leading-5 break-all">
+                  Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et.
+                </p>
+                <div class="flex gap-[30px]">
+                  <img src="../assets/icons/linkedin.svg" alt="linkedin" />
+                  <img src="../assets/icons/twitter.svg" alt="twitter" />
+                </div>
+              </div>
+            </div>
+            <h4 class="text-blackVariant2 text-xl mt-5 mb-2.5">
+              Vikanth Kamalakanthan
+            </h4>
+            <span class="text-blackVariant2 font-normal text-base"
+              >Managing Partner</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- below section requires external package for auto slider -->
+    <!-- <section
+      id="accolades"
+      class="bg-white px-5 md:px-10 lg:px-20 py-20 lg:pb-15"
+    >
+      <div class="max-w-[1120px] mx-auto flex flex-col space-y-10 items-center">
+        <h2 class="text-blackVariant1 text-center">Accolades we achieved</h2>
+        <p class="text-base text-center text-blackVariant2">
+          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan,
+        </p>
+        <div class="flex gap-5 justify-center overflow-hidden w-full">
+          <div class="min-w-[240px] h-40">
+            <img
+              src="../assets/images/certificate1.png"
+              alt="certificates"
+              class="w-full h-full"
+            />
+          </div>
+          <div class="min-w-[240px] h-40">
+            <img
+              src="../assets/images/certificate1.png"
+              alt="certificates"
+              class="w-full h-full"
+            />
+          </div>
+          <div class="min-w-[240px] h-40">
+            <img
+              src="../assets/images/certificate1.png"
+              alt="certificates"
+              class="w-full h-full"
+            />
+          </div>
+          <div class="min-w-[240px] h-40">
+            <img
+              src="../assets/images/certificate1.png"
+              alt="certificates"
+              class="w-full h-full"
+            />
+          </div>
+        </div>
+        <div class="flex gap-x-3.5 autoSlider">
+          <span class="dotControl"></span>
+          <span class="dotControl dotControl_active"></span>
+          <span class="dotControl"></span>
+          <span class="dotControl"></span>
+        </div>
+      </div>
+    </section> -->
+    <!-- above section requires external package for auto slider -->
+
+    <section id="photo_gallery" class="px-5 md:px-10 lg:px-20 py-20">
+      <div
+        class="mx-auto max-w-[1120px] bg-white border-2 border-greyVariant1 rounded-5 px-5 pb-5 pt-10 lg:px-10 lg:pb-10 lg:pt-15 flex flex-col items-center"
+      >
+        <h3 class="text-primary text-32">Photo Gallery</h3>
+        <ul
+          class="flex justify-start md:justify-center gap-[30px] mb-10 mt-5 text-base text-blackVariant2 w-full overflow-x-auto"
+        >
+          <li class="border-b-2 border-tertiary tab" data-tab="cat_1">
+            Category 1
+          </li>
+          <li class="tab" data-tab="cat_2">Category 2</li>
+          <li class="tab" data-tab="cat_3">Category 3</li>
+          <li class="tab" data-tab="cat_4">Category 4</li>
+          <li class="tab" data-tab="cat_5">Category 5</li>
+        </ul>
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 grid-rows-auto gap-10 w-full"
+        >
+          <div
+            class="w-auto h-[130px] md:h-[186px] lg:max-w-80 lg:h-80 bg-greyVariant4 rounded-5"
+          >
+            <img
+              src="../assets/icons/image.svg"
+              class="w-full h-full rounded-5"
+            />
+          </div>
+          <div
+            class="w-auto h-[130px] md:h-[186px] lg:max-w-80 lg:h-80 bg-greyVariant4 rounded-5"
+          >
+            <img
+              src="../assets/icons/image.svg"
+              class="w-full h-full rounded-5"
+            />
+          </div>
+          <div
+            class="w-auto h-[130px] md:h-[186px] lg:max-w-80 lg:h-80 bg-greyVariant4 rounded-5"
+          >
+            <img
+              src="../assets/icons/image.svg"
+              class="w-full h-full rounded-5"
+            />
+          </div>
+          <div
+            class="w-auto h-[130px] md:h-[186px] lg:max-w-80 lg:h-80 bg-greyVariant4 rounded-5"
+          >
+            <img
+              src="../assets/icons/image.svg"
+              class="w-full h-full rounded-5"
+            />
+          </div>
+          <div
+            class="w-auto h-[130px] md:h-[186px] lg:max-w-80 lg:h-80 bg-greyVariant4 rounded-5"
+          >
+            <img
+              src="../assets/icons/image.svg"
+              class="w-full h-full rounded-5"
+            />
+          </div>
+          <div
+            class="w-auto h-[130px] md:h-[186px] lg:max-w-80 lg:h-80 bg-greyVariant4 rounded-5"
+          >
+            <img
+              src="../assets/icons/image.svg"
+              class="w-full h-full rounded-5"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- resused sections below -->
+    <section class="bg-white lg:px-20 px-10 py-20 overflow-hidden">
+      <div class="mx-auto max-w-[1120px] flex flex-col items-center">
+        <h4 class="text-primaryVariant1">CLIENTS</h4>
+        <h2 class="mt-2.5 mb-10 text-blackVariant1 text-center">
+          Lorem Cleints ipsum
+        </h2>
+        <p class="text-blackVariant2 text-base text-center max-w-[715px]">
+          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan,
+        </p>
+        <div class="flex mt-[68px] w-full gap-10 overflow-x-auto">
+          <img
+            src="../assets/images/clientLogo1.jpg"
+            class="border border-greyVariant2 py-7 px-12"
+          />
+          <img
+            src="../assets/images/clientLogo2.png"
+            class="border border-greyVariant2 py-7 px-12"
+          />
+          <img
+            src="../assets/images/clientLogo3.png"
+            class="border border-greyVariant2 py-7 px-12"
+          />
+          <img
+            src="../assets/images/clientLogo4.png"
+            class="border border-greyVariant2 py-7 px-12"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="talkToExpert_section lg:px-20 px-10 py-20 overflow-hidden">
+      <div class="max-w-[1120px] mx-auto flex flex-col items-center space-y-10">
+        <h2 class="text-white text-center max-w-[508px]">
+          Need assistance? Talk to our experts now
+        </h2>
+        <p class="text-white text-base text-center max-w-[816px]">
+          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan, risus sem sollicitudin lacus.
+        </p>
+        <div class="flex flex-col md:flex-row gap-5">
+          <button class="primaryButton flex items-center gap-3">
+            <img src="../assets/icons/phone_icon.svg" class="w-4 h-4" />
+            <span>Call: +91-9876 543 321</span>
+          </button>
+          <button class="secondaryButton">
+            <span>Schedule Consultation</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white lg:px-20 px-10 py-20 overflow-hidden">
+      <div
+        class="flex lg:flex-row flex-col max-w-[1120px] mx-auto space-y-10 lg:space-y-0 gap-20"
+      >
+        <div class="w-full lg:w-1/2">
+          <h4 class="text-primaryVariant1 mb-2.5 w-12 h-12">FAQ</h4>
+          <h2 class="text-blackVariant1">Frequently asked questions</h2>
+          <p class="text-blackVariant2 text-base my-10">
+            Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+            nec fringilla accumsan.
+          </p>
+          <button class="secondaryButton">View More</button>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <div
+            class="flex flex-col text-blackVariant2 text-base border-y border-greyVariant1 p-5"
+          >
+            <div class="flex items-center justify-between accordion gap-5">
+              <h5 class="">
+                Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ?
+              </h5>
+              <button>
+                <img
+                  class="accordion_sign min-h-5 min-w-5"
+                  src="../assets/icons/add_plus.svg"
+                />
+              </button>
+            </div>
+
+            <p class="font-normal mt-5 hidden">
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra.
+            </p>
+          </div>
+          <div
+            class="flex flex-col text-blackVariant2 text-base border-y border-greyVariant1 p-5"
+          >
+            <div class="flex items-center justify-between accordion gap-5">
+              <h5 class="">
+                Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ?
+              </h5>
+              <button>
+                <img
+                  class="accordion_sign min-h-5 min-w-5"
+                  src="../assets/icons/add_plus.svg"
+                />
+              </button>
+            </div>
+
+            <p class="font-normal mt-5 acc_content hidden">
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra.
+            </p>
+          </div>
+          <div
+            class="flex flex-col text-blackVariant2 text-base border-y border-greyVariant1 p-5"
+          >
+            <div class="flex items-center justify-between accordion gap-5">
+              <h5 class="">
+                Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ?
+              </h5>
+              <button>
+                <img
+                  class="accordion_sign min-h-5 min-w-5"
+                  src="../assets/icons/add_plus.svg"
+                />
+              </button>
+            </div>
+
+            <p class="font-normal mt-5 acc_content hidden">
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra.
+            </p>
+          </div>
+          <div
+            class="flex flex-col text-blackVariant2 text-base border-y border-greyVariant1 p-5"
+          >
+            <div class="flex items-center justify-between accordion gap-5">
+              <h5 class="">
+                Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ?
+              </h5>
+              <button>
+                <img
+                  class="accordion_sign min-h-5 min-w-5"
+                  src="../assets/icons/add_plus.svg"
+                />
+              </button>
+            </div>
+
+            <p class="font-normal mt-5 acc_content hidden">
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-primary lg:px-20 px-10 py-20 overflow-hidden">
+      <div
+        class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between mx-auto max-w-[1120px]"
+      >
+        <div class="flex flex-col md:flex-row gap-10 w-full lg:w-1/2">
+          <div class="lg:max-w-[250px] md:max-w-[50%] max-w-full space-y-5">
+            <div class="flex mb-10 items-center">
+              <img src="../assets/icons/logo.svg" alt="logo" class="h-8 w-16" />
+              <img
+                class="ml-6 w-40 h-7"
+                src="../assets/icons/brand.svg"
+                alt="brand_name"
+              />
+            </div>
+            <div class="space-y-5 font-normal text-base text-white">
+              <p>
+                Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ac aliquet odio mattis.
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos.
+              </p>
+              <p>
+                Curabitur tempus urna at turpis condimentum lobortis. Ut commodo
+                efficitur neque.
+              </p>
+            </div>
+            <div class="flex gap-6">
+              <a>
+                <img src="../assets/images/linkedin.png" alt="linkedin" />
+              </a>
+              <a>
+                <img src="../assets/images/twitter.png" alt="twitter" />
+              </a>
+              <a>
+                <img src="../assets/images/fb.png" alt="fb" />
+              </a>
+              <a>
+                <img src="../assets/images/instagram.png" alt="instagram" />
+              </a>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2">
+            <h5 class="font-normal text-base text-white mb-10 leading-[14px]">
+              Company
+            </h5>
+            <ul class="text-secondary text-base space-y-5 infoList">
+              <li>About Us</li>
+              <li>Meet the team</li>
+              <li>Practice areas</li>
+              <li>Careers</li>
+              <li>Contact Us</li>
+              <li>Blogs</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-10 w-full lg:w-1/2">
+          <div class="space-y-10 w-full md:w-1/2">
+            <h5 class="font-normal text-base text-white leading-[14px]">
+              Integrations
+            </h5>
+            <ul class="text-secondary text-base space-y-5 infoList">
+              <li>Arbitration & Dispute Resolution</li>
+              <li>Banking & Finance</li>
+              <li>Corporate & Commercial</li>
+              <li>Data Protection & Privacy</li>
+              <li>Employment</li>
+              <li>Energy & Infrastructure and renewables</li>
+              <li>Intellectual Property</li>
+              <li>Media, Entertainment & Sports</li>
+              <li>Mergers & Acquisitions</li>
+              <li>Private Equity & Venture Capital</li>
+              <li>Real Estate</li>
+              <li>Restructuring & Insolvency</li>
+              <li>Arbitration & Dispute Resolution</li>
+              <li>Technology</li>
+            </ul>
+          </div>
+          <div class="space-y-10 w-full md:w-1/2">
+            <h5 class="font-normal text-base text-white leading-[14px]">
+              Navigation
+            </h5>
+            <ul class="text-secondary text-base space-y-5 infoList">
+              <li>Real estate advocates</li>
+              <li>Real estate advocates near me</li>
+              <li>Trivandrum advocates</li>
+              <li>Kochi advocates</li>
+              <li>Corporate lawyers</li>
+              <li>Corporate lawyer near me</li>
+              <li>Legal advisor for the company</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-primaryVariant2 p-10">
+      <footer
+        class="mx-auto max-w-[1120px] flex flex-col md:flex-row text-secondary text-base md:space-x-10 space-y-5 md:space-y-0"
+      >
+        <small>Copyright © DraftAndCode, 2023 | All rights resereved</small>
+        <a>Privacy Policy</a>
+        <a>Terms & Conditions</a>
+      </footer>
+    </section>
+    <!-- resused sections above -->
+  </body>
+  <script src="../main.js"></script>
+</html>

@@ -1,0 +1,226 @@
+@font-face {
+  font-family: DMSerifDisplayR;
+  src: url("../assets/font/DMSerifDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: DMSerifDisplayI;
+  src: url("../assets/font/DMSerifDisplay-Italic.ttf");
+}
+
+@-webkit-keyframes slidein {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  75% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes slidein {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  75% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes fadeUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.wrapper {
+  scroll-behavior: smooth;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-animation: fadeUp 1s forwards;
+          animation: fadeUp 1s forwards;
+}
+
+.wrapper h1,
+.wrapper h2,
+.wrapper h3 {
+  font-family: "DMSerifDisplayR";
+}
+
+.wrapper h2 {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 1023px) {
+  .wrapper h2 {
+    font-size: 40px;
+  }
+}
+
+.wrapper h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.wrapper p {
+  word-break: break-all;
+}
+
+.list li {
+  font-family: DMSerifDisplayR;
+}
+
+.list li:hover {
+  color: white;
+  cursor: pointer;
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+}
+
+.memberCards:hover .card {
+  visibility: visible;
+}
+
+.infoList li {
+  line-height: 20px;
+}
+
+.slider {
+  max-width: 350px;
+  -webkit-animation: slidein 0.5s linear !important;
+          animation: slidein 0.5s linear !important;
+}
+
+.slider #slider_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.activeIndex, #index li:hover {
+  color: #806180;
+  -webkit-text-decoration: underline #806180;
+          text-decoration: underline #806180;
+}
+
+#index li {
+  line-height: 26px;
+}
+
+#photo_gallery ul li,
+#history_details ul li {
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.primaryButton {
+  border-radius: 4px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 0;
+  padding: 9px 24px;
+  background: #483248;
+  color: #fff;
+  border: 2px solid #ffffff;
+}
+
+.secondaryButton {
+  border-radius: 4px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 0;
+  padding: 9px 24px;
+  color: #483248;
+  background: #fff;
+  border: 2px solid #483248;
+}
+
+.dotControl {
+  display: block;
+  border: 2px solid #806180;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+}
+
+.dotControl_active {
+  background: #ccb4cc;
+}
+
+.dotControl_flatActive {
+  background: #ccb4cc;
+  width: 48px;
+}
+
+.section_stats {
+  background-image: url("../assets/images/image-placeholder.png");
+  background-size: 100% 100%;
+}
+
+.navBtn {
+  background: #483248;
+  border-radius: 4px;
+  height: 48px;
+  width: 48px;
+}
+
+.navBtn img {
+  margin: 0 auto;
+  height: 14px;
+  width: 18px;
+}
+
+.blurBg {
+  background-color: rgba(41, 28, 41, 0.8) !important;
+}
+
+.founder_story {
+  background-image: url("../assets/icons/BG.svg");
+  background-size: auto;
+}
+
+.section7 {
+  background-image: url("../assets/images/bg1.png");
+  background-size: 100% 100%;
+}
+
+.talkToExpert_section {
+  background-image: url("../assets/images/bg2.png");
+  background-size: 100% 100%;
+}
+/*# sourceMappingURL=index.css.map */

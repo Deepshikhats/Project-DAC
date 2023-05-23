@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#483248",
+              secondary: "#CCB4CC",
+              tertiary: "#806180",
+              primaryVariant1: "#593D59",
+              primaryVariant2: "#332333",
+              primaryVariant3: "rgba(41, 28, 41, 0.8)",
+              blackVariant1: "#363636",
+              blackVariant2: "#242424",
+              roseVariant1: "#f2e4f24d",
+              greyVariant1: "#E5E5E5",
+              greyVariant2: "#F3F3F3",
+            },
+            fontFamily: {
+              sans: ['"DM Sans"'],
+            },
+            spacing: {
+              "18px": "18px",
+              15: "60px",
+            },
+            fontSize: {
+              32: "32px",
+              64: "64px",
+            },
+            borderRadius: {
+              5: "5px",
+            },
+          },
+        },
+      };
+    </script>
+    <title>DAC-Home</title>
+  </head>
+  <body class="font-sans font-medium wrapper">
+    <section
+      class="bg-primary lg:p-20 px-10 md:pr-0 pt-5 pb-20 transition-all relative overflow-hidden"
+      id="section_1"
+    >
+      <div class="max-w-[1120px] mx-auto">
+        <!-- reusable component below- common_header-->
+        <header class="flex justify-between items-baseline md:me-5 lg:mr-0">
+          <div class="flex items-end w-[45%] md:w-1/2">
+            <img src="../assets/icons/logo.svg" alt="logo" />
+            <img
+              class="ml-6"
+              src="../assets/icons/brand.svg"
+              alt="brand_name"
+            />
+          </div>
+          <div
+            class="flex flex-col md:flex-row items-end md:items-start gap-[60px] md:gap-10 md:gap-none"
+            id="iconsToHide"
+          >
+            <img
+              src="../assets/icons/hamburger.svg"
+              alt="hamburger_menu"
+              onclick="handleMenu()"
+              class="cursor-pointer h-10 lg:h-12"
+            />
+            <button
+              class="flex items-center bg-white rounded justify-center h-10 lg:h-12 w-[149px] lg:w-[161px]"
+            >
+              <img src="../assets/icons/circle_chat.svg" alt="chat_icon" />
+              <span class="font-sans ml-3.5 text-base font-bold"
+                >Ask Lawyer</span
+              >
+            </button>
+          </div>
+        </header>
+        <!-- reusable component above- common_header-->
+        <div
+          class="flex justify-between items-center mt-[74px] md:mt-5 lg:mt-8"
+        >
+          <div class="w-[415px]">
+            <h3 class="text-white text-32 font-normal leading-[42px]">
+              Hello!
+            </h3>
+            <h1
+              class="text-white lg:text-64 text-[40px] font-normal lg:leading-[86px] leading-[54px]"
+            >
+              Lorem ipsum dolor sit amet
+            </h1>
+            <p class="text-xl text-white leading-6 my-10">
+              Forem ipsum dolor sit amet,consect adipiscing elit. Etiam eu
+              turpis molestie, est metus nec fringilla accumsan.
+            </p>
+            <div>
+              <button class="primaryButton me-6">Learn More</button>
+              <button class="secondaryButton">Book Now</button>
+            </div>
+          </div>
+          <div>
+            <img
+              alt="person"
+              src="../assets/icons/image.svg"
+              class="w-[560px] lg:left-0 left-[122px] relative md:block hidden animate-pulse"
+            />
+          </div>
+        </div>
+        <!-- <div class="flex gap-x-3.5 mt-10">
+          <span class="dotControl"></span>
+          <span class="dotControl dotControl_flatActive"></span>
+          <span class="dotControl"></span>
+          <span class="dotControl"></span>
+        </div> -->
+      </div>
+      <div
+        class="absolute top-0 right-0 h-full w-full bg-primaryVariant3 hidden"
+        id="slider_wrapper"
+      >
+        <div
+          id="hamburger_menu"
+          class="bg-primary border-s-2 border-white absolute top-0 right-0 h-full p-10 lg:p-20"
+        >
+          <div class="hidden flex-col items-center h-full" id="slider_wrapper">
+            <img
+              alt="slider"
+              src="../assets/images/hamburger.png"
+              class="absolute top-20 left-[-50px] cursor-pointer"
+              onclick="handleMenu()"
+            />
+
+            <img
+              src="../assets/icons/logo2.svg"
+              class="max-w-[200px] max-h-[200px]"
+            />
+            <ul
+              class="text-2xl text-secondary font-normal list space-y-5 md:mt-10 leading-8 lg:mt-15 text-center"
+            >
+              <li><a href="aboutUs.html">About Us</a></li>
+              <li><a>Practice areas</a></li>
+              <li><a>Career</a></li>
+              <li><a>Blogs</a></li>
+              <li><a>Contact us</a></li>
+            </ul>
+            <div class="flex gap-6 mt-auto">
+              <a>
+                <img src="../assets/icons/linkedin.svg" alt="linkedin" />
+              </a>
+              <a>
+                <img src="../assets/icons/twitter.svg" alt="twitter" />
+              </a>
+              <a>
+                <img src="../assets/icons/fb.svg" alt="fb" />
+              </a>
+              <a>
+                <img src="../assets/icons/instagram.svg" alt="instagram" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="about_us"
+      class="bg-white py-20 px-10 lg:px-20 overflow-hidden"
+    >
+      <div
+        class="max-w-[1120px] mx-auto flex flex-col md:flex-row justify-between md:items-start items-center gap-20"
+      >
+        <div class="w-full md:w-1/2">
+          <img
+            src="../assets/images/justice_lady.png"
+            alt="justice_lady"
+            class="w-80 lg:w-[520px] h-80 lg:h-[480px] mx-auto"
+          />
+        </div>
+        <div class="w-full md:w-1/2">
+          <h4 class="text-primaryVariant1">ABOUT US</h4>
+          <h2 class="text-blackVariant1 mb-10">Lorem ipsum dolor</h2>
+          <p class="text-blackVariant2 text-base">
+            Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+            tellus elit sed risus. Maecenas eget condimentum velit, sit amet
+            feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
+            conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus
+            enim egestas, ac scelerisque ante pulvinar.
+          </p>
+          <button class="secondaryButton mt-10">Learn More</button>
+        </div>
+      </div>
+    </section>
+    <section class="section_stats lg:px-20 px-10 py-20">
+      <div
+        class="max-w-[1120px] flex flex-col items-center mx-auto overflow-hidden"
+      >
+        <h4 class="text-white">WHY US</h4>
+        <h2 class="text-white text-center">We stands unique ipsum</h2>
+        <p class="text-white text-center my-10 text-base">
+          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan, risus sem sollicitudin lacus.
+        </p>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-[30px] lg:gap-10 lg:overflow-x-auto w-full"
+        >
+          <div>
+            <div
+              class="max-w-[240px] mx-auto md:mx-0 md:ml-auto lg:max-w-[250px] lg:min-h-[180px] h-[150px] border border-secondary flex flex-col justify-center items-center"
+            >
+              <span class="text-5xl text-secondary">200+</span>
+              <span class="text-white text-base">Happy Clients</span>
+            </div>
+          </div>
+          <div>
+            <div
+              class="max-w-[240px] mx-auto md:mx-0 md:mr-auto lg:max-w-[250px] lg:min-h-[180px] h-[150px] border border-secondary flex flex-col justify-center items-center"
+            >
+              <span class="text-5xl text-secondary">200+</span>
+              <span class="text-white text-base">Success Ratio</span>
+            </div>
+          </div>
+
+          <div>
+            <div
+              class="max-w-[240px] mx-auto md:mx-0 md:ml-auto lg:max-w-[250px] lg:min-h-[180px] h-[150px] border border-secondary flex flex-col justify-center items-center"
+            >
+              <span class="text-5xl text-secondary">200+</span>
+              <span class="text-white text-base">Cases Won</span>
+            </div>
+          </div>
+          <div>
+            <div
+              class="max-w-[240px] mx-auto md:mx-0 md:mr-auto lg:max-w-[250px] lg:min-h-[180px] h-[150px] border border-secondary flex flex-col justify-center items-center"
+            >
+              <span class="text-5xl text-secondary">200+</span>
+              <span class="text-white text-base">Certifications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-20 px-5 md:px-10 lg:px-20 overflow-hidden">
+      <div class="max-w-[1208px] mx-auto xl:flex-row gap-10">
+        <div class="flex flex-col items-center">
+          <h4 class="text-primaryVariant1">PRACTICE AREAS</h4>
+          <h2 class="text-blackVariant1">We do lorem ipsum</h2>
+          <p
+            class="text-blackVariant2 text-base text-center max-w-[715px] my-10"
+          >
+            Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+            nec fringilla accumsan,
+          </p>
+
+          <div class="flex flex-col lg:flex-row gap-10">
+            <div
+              class="flex flex-col bg-roseVariant1 w-80 p-[30px] min-h-[480px] justify-between"
+            >
+              <img
+                src="../assets/icons/balance.svg"
+                alt="img_balance"
+                class="w-12 h-12"
+              />
+              <div class="text-2xl mb-5 mt-7">
+                Arbitration & Dispute Resolution
+              </div>
+              <p class="text-base">
+                Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
+                interdum tellus elit sed risus.
+              </p>
+              <button class="secondaryButton mt-auto w-[138px]">
+                Learn More
+              </button>
+            </div>
+            <div
+              class="flex flex-col bg-roseVariant1 w-80 p-[30px] min-h-[480px] justify-between"
+            >
+              <img
+                src="../assets/icons/home.svg"
+                alt="img_home"
+                class="w-12 h-12"
+              />
+              <div class="text-2xl mb-5 mt-7">
+                Arbitration & Dispute Resolution
+              </div>
+              <p class="text-base">
+                Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
+                interdum tellus elit sed risus.
+              </p>
+              <button class="secondaryButton mt-auto w-[138px]">
+                Learn More
+              </button>
+            </div>
+            <div
+              class="flex flex-col bg-roseVariant1 w-80 p-[30px] min-h-[480px] justify-between"
+            >
+              <img
+                src="../assets/icons/suitcase.svg"
+                alt="img_suitcase"
+                class="w-12 h-12"
+              />
+              <div class="text-2xl mb-5 mt-7">
+                Arbitration & Dispute Resolution
+              </div>
+              <p class="text-base">
+                Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
+                interdum tellus elit sed risus.
+              </p>
+              <button class="secondaryButton mt-auto w-[138px]">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="founder_story py-20 lg:px-20 px-10 overflow-hidden">
+      <div
+        class="max-w-[1120px] mx-auto border rounded-5 lg:gap-20 gap-10 bg-white border-secondary p-10 flex justify-between lg:flex-row flex-col items-center"
+      >
+        <img src="../assets/images/banner-pic.png" alt="founder_img" />
+        <div class="flex flex-col lg:items-start items-center w-full">
+          <h3 class="font-normal text-[32px] text-primary">Fonder’s Story</h3>
+          <ul
+            class="flex gap-[30px] mb-10 mt-5 text-base text-blackVariant2 w-full overflow-x-auto justify-start md:justify-center lg:justify-start"
+          >
+            <li class="border-b-2 border-tertiary tab" data-tab="about">
+              About
+            </li>
+            <li class="tab" data-tab="experience">Experience</li>
+            <li class="tab" data-tab="history">History</li>
+            <li class="tab" data-tab="accolades">Accolades</li>
+            <li class="tab" data-tab="certifications">Certifications</li>
+          </ul>
+          <div class="text-base text-blackVariant2">
+            <p id="content">
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+              tellus elit sed risus. Maecenas eget condimentum velit, sit amet
+              feugiat lectus.
+            </p>
+            <p class="mt-5">
+              Class aptent taciti sociosqu ad litora torquent per conubia
+              nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
+              egestas, ac scelerisque ante pulvinar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section7 lg:px-20 px-10 py-20 overflow-hidden">
+      <div class="flex flex-col items-center mx-auto max-w-[1120px]">
+        <h2 class="text-white text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          vulputate
+        </h2>
+        <p class="text-white text-base text-center my-10">
+          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan, risus sem sollicitudin lacus.
+        </p>
+        <div class="flex gap-5">
+          <button class="primaryButton">Learn More</button>
+          <button class="secondaryButton">Book Now</button>
+        </div>
+      </div>
+    </section>
+    <section id="newsletter_section" class="p-20 overflow-hidden">
+      <div class="mx-auto max-w-[1120px] flex flex-col items-center">
+        <h4>FEATURED BLOGS</h4>
+        <h2 class="mt-2.5 mb-10 text-blackVariant1">What’s in newsletters</h2>
+        <div class="flex space-x-10 xl:flex-row flex-col items-center">
+          <button
+            class="navBtn hidden xl:block min-w-[48px]"
+            onclick="slideNewsletter('left')"
+          >
+            <img src="../assets/icons/left_arrow.svg" class="min-w-[18px]" />
+          </button>
+          <div class="flex gap-10">
+            <div
+              id="card1"
+              class="flex flex-col w-80 border rounded-5 border-greyVariant1 min-h-[480px] card"
+            >
+              <img
+                src="../assets/images/img1.png"
+                alt="img_1"
+                class="w-80 h-[200px] h-12"
+              />
+              <div class="p-5 flex flex-col h-full">
+                <div class="text-blackVariant2 space-y-5">
+                  <p class="text-xl title">
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. 1
+                  </p>
+                  <p class="text-base pb-5 content">
+                    Aliquet odio mattis. Class aptent taciti sociosqu ad litora
+                    torquent per conubia nostra.
+                  </p>
+                </div>
+                <button class="secondaryButton mt-auto w-[138px]">
+                  Learn More
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-80 border rounded-5 border-greyVariant1 shadow-xl min-h-[480px] card"
+              id="card2"
+            >
+              <img
+                src="../assets/images/img55.jpg"
+                alt="img_1"
+                class="w-80 h-[200px] h-12"
+              />
+              <div class="p-5 flex flex-col h-full">
+                <div class="text-blackVariant2 space-y-5">
+                  <p class="text-xl title">
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. 2
+                  </p>
+                  <p class="text-base pb-5 content">lalala</p>
+                </div>
+                <button class="secondaryButton mt-auto w-[138px]">
+                  Learn More
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-80 border rounded-5 border-greyVariant1 min-h-[480px] card"
+              id="card3"
+            >
+              <img
+                src="../assets/images/img56.jpg"
+                alt="img_1"
+                class="w-80 h-[200px] h-12"
+              />
+              <div class="p-5 h-full flex flex-col">
+                <div class="text-blackVariant2 space-y-5">
+                  <p class="text-xl title">
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. 3
+                  </p>
+                  <p class="text-base pb-5 content">
+                    Aliquet odio mattis. Class aptent taciti sociosqu ad litora
+                    torquent per conubia nostra.
+                  </p>
+                </div>
+                <button class="secondaryButton mt-auto w-[138px]">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-10 mt-10 xl:mt-0">
+            <button class="navBtn max-h-[48px] xl:hidden block">
+              <img
+                src="../assets/icons/left_arrow.svg"
+                class="min-w-[18px]"
+                onclick="slideNewsletter('left')"
+              />
+            </button>
+            <button class="navBtn max-h-[48px]">
+              <img
+                src="../assets/icons/right_arrow.svg"
+                class="min-w-[18px]"
+                onclick="slideNewsletter('right')"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="review_section" class="bg-greyVariant2 lg:px-20 px-10 py-20">
+      <div class="max-w-[1120px] mx-auto flex flex-col items-center">
+        <h4 class="text-primaryVariant1">TESTIMONIALS</h4>
+        <h2 class="mt-2.5 mb-10 text-blackVariant1">Hear from lorem ipsum</h2>
+        <div class="flex flex-col md:flex-row gap-10">
+          <div class="bg-white border border-secondary rounded-5 reviewCard">
+            <div class="flex p-10 gap-5">
+              <img
+                src="../assets/images/pf2.png"
+                class="h-20 w-20"
+                alt="profile_Pic"
+              />
+              <div class="flex flex-col text-blackVariant2">
+                <p class="text-base">
+                  <i>
+                    Morem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. Class aptent taciti sociosqu ad litora.
+                  </i>
+                </p>
+                <span class="font-bold text-base mt-5 mb-[7px] name"
+                  >John Snow</span
+                >
+                <span class="font-normal text-sm position"
+                  >King in the north</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bg-white border border-secondary rounded-5 reviewCard">
+            <div class="flex p-10 gap-5">
+              <img
+                src="../assets/images/pf1.png"
+                class="h-20 w-20 rounded-[40px]"
+                alt="profile_Pic"
+              />
+              <div class="flex flex-col text-blackVariant2">
+                <p class="text-base">
+                  <i>
+                    Morem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. Class aptent taciti sociosqu ad litora.
+                  </i>
+                </p>
+                <span class="font-bold text-base mt-5 mb-[7px] name"
+                  >John Snow</span
+                >
+                <span class="font-normal text-sm position"
+                  >King in the north</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-x-3.5 mt-10 autoSlider">
+          <span class="dotControl"></span>
+          <span class="dotControl dotControl_active"></span>
+          <span class="dotControl"></span>
+          <span class="dotControl"></span>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white lg:px-20 px-10 py-20 overflow-hidden">
+      <div class="mx-auto max-w-[1120px] flex flex-col items-center">
+        <h4 class="text-primaryVariant1">CLIENTS</h4>
+        <h2 class="mt-2.5 mb-10 text-blackVariant1 text-center">
+          Lorem Cleints ipsum
+        </h2>
+        <p class="text-blackVariant2 text-base text-center max-w-[715px]">
+          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan,
+        </p>
+        <div
+          class="flex mt-[68px] w-full justify-start md:justify-around gap-10 overflow-x-auto"
+        >
+          <img
+            src="../assets/images/clientLogo1.jpg"
+            class="border border-greyVariant2 py-7 px-12"
+          />
+          <img
+            src="../assets/images/clientLogo2.png"
+            class="border border-greyVariant2 py-7 px-12"
+          />
+          <img
+            src="../assets/images/clientLogo3.png"
+            class="border border-greyVariant2 py-7 px-12"
+          />
+          <img
+            src="../assets/images/clientLogo4.png"
+            class="border border-greyVariant2 py-7 px-12"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="talkToExpert_section lg:px-20 px-10 py-20 overflow-hidden">
+      <div class="max-w-[1120px] mx-auto flex flex-col items-center space-y-10">
+        <h2 class="text-white text-center max-w-[508px]">
+          Need assistance? Talk to our experts now
+        </h2>
+        <p class="text-white text-base text-center max-w-[816px]">
+          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan, risus sem sollicitudin lacus.
+        </p>
+        <div class="flex flex-col md:flex-row gap-5">
+          <button class="primaryButton flex items-center gap-3">
+            <img src="../assets/icons/phone_icon.svg" class="w-4 h-4" />
+            <span>Call: +91-9876 543 321</span>
+          </button>
+          <button class="secondaryButton">
+            <span>Schedule Consultation</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white lg:px-20 px-10 py-20 overflow-hidden">
+      <div
+        class="flex lg:flex-row flex-col max-w-[1120px] mx-auto space-y-10 lg:space-y-0"
+      >
+        <div class="w-full lg:w-1/2">
+          <h4 class="text-primaryVariant1 mb-2.5">FAQ</h4>
+          <h2 class="text-blackVariant1">Frequently asked questions</h2>
+          <p class="text-blackVariant2 text-base my-10">
+            Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+            nec fringilla accumsan.
+          </p>
+          <button class="secondaryButton">View More</button>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <div
+            class="flex flex-col text-blackVariant2 text-base border-y border-greyVariant1 p-5"
+          >
+            <div class="flex items-center justify-between accordion gap-5">
+              <h5 class="">
+                Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ?
+              </h5>
+              <button>
+                <img
+                  class="accordion_sign min-h-5 min-w-5"
+                  src="../assets/icons/add_plus.svg"
+                />
+              </button>
+            </div>
+
+            <p class="font-normal mt-5 hidden">
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra.
+            </p>
+          </div>
+          <div
+            class="flex flex-col text-blackVariant2 text-base border-y border-greyVariant1 p-5"
+          >
+            <div class="flex items-center justify-between accordion gap-5">
+              <h5 class="">
+                Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ?
+              </h5>
+              <button>
+                <img
+                  class="accordion_sign min-h-5 min-w-5"
+                  src="../assets/icons/add_plus.svg"
+                />
+              </button>
+            </div>
+
+            <p class="font-normal mt-5 acc_content hidden">
+              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-primary lg:px-20 px-10 py-20 overflow-hidden">
+      <div
+        class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 justify-between mx-auto max-w-[1120px]"
+      >
+        <div class="flex flex-col md:flex-row gap-10 w-full lg:w-1/2">
+          <div class="lg:max-w-[250px] md:max-w-[50%] max-w-full space-y-5">
+            <div class="flex mb-10 items-center">
+              <img src="../assets/icons/logo.svg" alt="logo" class="h-8 w-16" />
+              <img
+                class="ml-6 w-40 h-7"
+                src="../assets/icons/brand.svg"
+                alt="brand_name"
+              />
+            </div>
+            <div class="space-y-5 font-normal text-base text-white">
+              <p>
+                Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ac aliquet odio mattis.
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos.
+              </p>
+              <p>
+                Curabitur tempus urna at turpis condimentum lobortis. Ut commodo
+                efficitur neque.
+              </p>
+            </div>
+            <div class="flex gap-6">
+              <a>
+                <img src="../assets/images/linkedin.png" alt="linkedin" />
+              </a>
+              <a>
+                <img src="../assets/images/twitter.png" alt="twitter" />
+              </a>
+              <a>
+                <img src="../assets/images/fb.png" alt="fb" />
+              </a>
+              <a>
+                <img src="../assets/images/instagram.png" alt="instagram" />
+              </a>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2">
+            <h5 class="font-normal text-base text-white mb-10 leading-[14px]">
+              Company
+            </h5>
+            <ul class="text-secondary text-base space-y-5 infoList">
+              <li>About Us</li>
+              <li>Meet the team</li>
+              <li>Practice areas</li>
+              <li>Careers</li>
+              <li>Contact Us</li>
+              <li>Blogs</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-10 w-full lg:w-1/2">
+          <div class="space-y-10 w-full md:w-1/2">
+            <h5 class="font-normal text-base text-white leading-[14px]">
+              Integrations
+            </h5>
+            <ul class="text-secondary text-base space-y-5 infoList">
+              <li>Arbitration & Dispute Resolution</li>
+              <li>Banking & Finance</li>
+              <li>Corporate & Commercial</li>
+              <li>Data Protection & Privacy</li>
+              <li>Employment</li>
+              <li>Energy & Infrastructure and renewables</li>
+              <li>Intellectual Property</li>
+              <li>Media, Entertainment & Sports</li>
+              <li>Mergers & Acquisitions</li>
+              <li>Private Equity & Venture Capital</li>
+              <li>Real Estate</li>
+              <li>Restructuring & Insolvency</li>
+              <li>Arbitration & Dispute Resolution</li>
+              <li>Technology</li>
+            </ul>
+          </div>
+          <div class="space-y-10 w-full md:w-1/2">
+            <h5 class="font-normal text-base text-white leading-[14px]">
+              Navigation
+            </h5>
+            <ul class="text-secondary text-base space-y-5 infoList">
+              <li>Real estate advocates</li>
+              <li>Real estate advocates near me</li>
+              <li>Trivandrum advocates</li>
+              <li>Kochi advocates</li>
+              <li>Corporate lawyers</li>
+              <li>Corporate lawyer near me</li>
+              <li>Legal advisor for the company</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-primaryVariant2 p-10">
+      <footer
+        class="mx-auto max-w-[1120px] flex flex-col md:flex-row text-secondary text-base md:space-x-10 space-y-5 md:space-y-0"
+      >
+        <small>Copyright © DraftAndCode, 2023 | All rights resereved</small>
+        <a>Privacy Policy</a>
+        <a>Terms & Conditions</a>
+      </footer>
+    </section>
+  </body>
+  <script src="../main.js"></script>
+</html>
