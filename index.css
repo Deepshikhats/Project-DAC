@@ -210,12 +210,12 @@
 }
 
 .founder_story {
-  background-image: url("./assets/icons/BG.svg");
+  background-image: url("assets/icons/BG.svg");
   background-size: auto;
 }
 
 .section7 {
-  background-image: url("./assets/images/bg1.png");
+  background-image: url("/assets/images/bg1.png");
   background-size: 100% 100%;
 }
 
