@@ -1,10 +1,10 @@
 @font-face {
   font-family: DMSerifDisplayR;
-  src: url("../assets/font/DMSerifDisplay-Regular.ttf");
+  src: url("./assets/font/DMSerifDisplay-Regular.ttf");
 }
 @font-face {
   font-family: DMSerifDisplayI;
-  src: url("../assets/font/DMSerifDisplay-Italic.ttf");
+  src: url("./assets/font/DMSerifDisplay-Italic.ttf");
 }
 
 //variables
@@ -151,7 +151,7 @@ $tertiary: #806180;
   }
 }
 .section_stats {
-  background-image: url("../assets/images/image-placeholder.png");
+  background-image: url("./assets/images/image-placeholder.png");
   background-size: 100% 100%;
 }
 .navBtn {
@@ -169,14 +169,14 @@ $tertiary: #806180;
   background-color: rgba(41, 28, 41, 0.8) !important;
 }
 .founder_story {
-  background-image: url("../assets/icons/BG.svg");
+  background-image: url("./assets/icons/BG.svg");
   background-size: auto;
 }
 .section7 {
-  background-image: url("../assets/images/bg1.png");
+  background-image: url("./assets/images/bg1.png");
   background-size: 100% 100%;
 }
 .talkToExpert_section {
-  background-image: url("../assets/images/bg2.png");
+  background-image: url("./assets/images/bg2.png");
   background-size: 100% 100%;
 }

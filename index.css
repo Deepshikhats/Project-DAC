@@ -1,11 +1,11 @@
 @font-face {
   font-family: DMSerifDisplayR;
-  src: url("../assets/font/DMSerifDisplay-Regular.ttf");
+  src: url("./assets/font/DMSerifDisplay-Regular.ttf");
 }
 
 @font-face {
   font-family: DMSerifDisplayI;
-  src: url("../assets/font/DMSerifDisplay-Italic.ttf");
+  src: url("./assets/font/DMSerifDisplay-Italic.ttf");
 }
 
 @-webkit-keyframes slidein {
@@ -188,7 +188,7 @@
 }
 
 .section_stats {
-  background-image: url("../assets/images/image-placeholder.png");
+  background-image: url("./assets/images/image-placeholder.png");
   background-size: 100% 100%;
 }
 
@@ -210,17 +210,17 @@
 }
 
 .founder_story {
-  background-image: url("../assets/icons/BG.svg");
+  background-image: url("./assets/icons/BG.svg");
   background-size: auto;
 }
 
 .section7 {
-  background-image: url("../assets/images/bg1.png");
+  background-image: url("./assets/images/bg1.png");
   background-size: 100% 100%;
 }
 
 .talkToExpert_section {
-  background-image: url("../assets/images/bg2.png");
+  background-image: url("./assets/images/bg2.png");
   background-size: 100% 100%;
 }
 /*# sourceMappingURL=index.css.map */
