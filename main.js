@@ -9,7 +9,7 @@ const handleMenu = () => {
   hamburger.classList.toggle('slider')
   sliderWrapper.classList.toggle('hidden')
   btn?.classList?.toggle('invisible')
-  console.log('hi')
+  document.querySelector('body').classList.toggle('overflow-y-hidden')
 }
 
 const tabs = document.querySelectorAll('.tab')
@@ -67,10 +67,10 @@ accordions.forEach(acc => {
     acc.nextElementSibling.classList.toggle('hidden')
     const button = acc.querySelector('button')
     const img = button.querySelector('img')
-    if (img.getAttribute('src') == '../assets/icons/add_plus.svg') {
-      img.src = '../assets/icons/minus.svg'
+    if (img.getAttribute('src') == './assets/icons/add_plus.svg') {
+      img.src = './assets/icons/minus.svg'
     } else {
-      img.src = '../assets/icons/add_plus.svg'
+      img.src = './assets/icons/add_plus.svg'
     }
   })
 })
@@ -81,25 +81,25 @@ if (slider) {
   const reviewCards = document.querySelectorAll('.reviewCard')
   const reviews = [
     {
-      src: '../assets/images/kohli.jpg',
+      src: './assets/images/kohli.jpg',
       name: 'Kohli',
       position: 'Cricketer',
       text: 'lalalala'
     },
     {
-      src: '../assets/images/abd2.jpg',
+      src: './assets/images/abd2.jpg',
       name: 'ABD',
       position: 'Cricketer',
       text: 'lalalala'
     },
     {
-      src: '../assets/images/trigger.png',
+      src: './assets/images/trigger.png',
       name: 'Dribiani',
       position: 'Cricketer',
       text: 'lalalala'
     },
     {
-      src: '../assets/images/messi.jpeg',
+      src: './assets/images/messi.jpeg',
       name: 'Messi',
       position: 'Football Player',
       text: 'lalalala'
